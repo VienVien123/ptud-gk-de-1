@@ -19,7 +19,7 @@
 ### Bước 1: Clone dự án
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/VienVien123/ptud-gk-de-1.git
 cd myblog
 ```
 

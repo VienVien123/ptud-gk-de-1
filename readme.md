@@ -1,15 +1,20 @@
-# GIỮA KÌ Blog
+# Blog Project - Midterm
 
-22003025 - NGUYỄN THỊ VIÊN
+**MSSV:** 22003025  
+**Họ và tên:** NGUYỄN THỊ VIÊN
 
+## Chức năng chính
+- **Bình luận (Comment)** với các vai trò phân quyền:
+  - **Viewer**: Chỉ có thể xem.
+  - **Collaborator**: Có thể chỉnh sửa, nhưng không thể xóa.
+  - **Editor**: Có quyền xem, chỉnh sửa, và xóa.
 
 ## Công nghệ sử dụng
-- Django (Python Framework)
-- HTML/CSS
-- JavaScript (tuỳ chọn)
-- Database: SQLite/PostgreSQL (tùy chọn)
+- **Framework:** Django (Python)
+- **Front-end:** HTML/CSS, JavaScript (tùy chọn)
+- **Database:** SQLite hoặc PostgreSQL
 
-## Cài đặt
+## Hướng dẫn cài đặt
 
 ### Bước 1: Clone dự án
 
@@ -18,23 +23,31 @@ git clone <repository-url>
 cd myblog
 ```
 
-## Cài đặt môi trường
+### Bước 2: Thiết lập môi trường ảo
 
-Tạo và kích hoạt môi trường ảo (virtual environment):
+Tạo môi trường ảo:
+
+- **Windows:**
 ```bash
 python -m venv venv
-source venv/bin/activate   # Linux/macOS
-venv\Scripts\activate      # Windows
+venv\Scripts\activate
 ```
 
-Cài đặt các thư viện cần thiết:
+- **Linux/macOS:**
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+### Bước 3: Cài đặt dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-## Chạy dự án
+### Bước 4: Thiết lập Database
 
-Chạy migrations để tạo database:
+Chạy migrations:
 ```bash
 python manage.py migrate
 ```
@@ -44,16 +57,19 @@ Tạo tài khoản admin:
 python manage.py createsuperuser
 ```
 
-Khởi chạy server:
+### Bước 5: Khởi động server
+
 ```bash
 python manage.py runserver
 ```
 
-Mở trình duyệt truy cập:
-- Website: [http://localhost:8000](http://localhost:8000)
-- Admin: [http://localhost:8000/admin](http://localhost:8000/admin)
+## Truy cập ứng dụng
+
+- **Trang web chính:** [http://localhost:8000](http://localhost:8000)
+- **Trang admin:** [http://localhost:8000/admin](http://localhost:8000/admin)
 
 ## Cấu trúc dự án
+
 ```
 myblog/
 ├── myblog/
@@ -68,5 +84,4 @@ myblog/
 ├── manage.py
 └── db.sqlite3
 
-```
 

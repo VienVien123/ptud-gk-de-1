@@ -1,0 +1,223 @@
+/* Modern Blog Post Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #343a40;
+  line-height: 1.6;
+}
+
+/* Main container */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Page title */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+  border-radius: 2px;
+}
+
+/* Post grid layout */
+.posts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* Post card */
+.post {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.post-content {
+  padding: 25px;
+}
+
+/* Post title */
+.post h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #212529;
+}
+
+/* Author info */
+.author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.author-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #6c5ce7;
+}
+
+/* Post text */
+.post p {
+  margin-bottom: 20px;
+  color: #495057;
+}
+
+/* Post image */
+.post-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Button styling */
+.btn {
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* View comments button */
+.btn-view {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+.btn-view:hover {
+  background-color: #5649c0;
+  box-shadow: 0 4px 8px rgba(108, 92, 231, 0.3);
+}
+
+/* Edit button */
+.edit {
+  background-color: #20bf6b;
+  color: white;
+}
+
+.edit:hover {
+  background-color: #1aa059;
+  box-shadow: 0 4px 8px rgba(32, 191, 107, 0.3);
+}
+
+/* Delete button */
+.delete {
+  background-color: #eb4d4b;
+  color: white;
+}
+
+.delete:hover {
+  background-color: #d44240;
+  box-shadow: 0 4px 8px rgba(235, 77, 75, 0.3);
+}
+
+/* Empty state */
+.no-posts {
+  text-align: center;
+  padding: 50px 0;
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+
+/* Post metadata */
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.post-date {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin: 20px auto;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+  
+  .post-content {
+    padding: 20px;
+  }
+  
+  .post h3 {
+    font-size: 1.3rem;
+  }
+  
+  .post-image {
+    height: 180px;
+  }
+}
